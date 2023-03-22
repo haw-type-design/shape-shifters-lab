@@ -6,6 +6,24 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: Manifont-Italic;
+    src: url("fonts/ManifontGroteskBookItalic-webfont.woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Adelphe-Regular;
+    src: url("fonts/Adelphe-FructidorRegular.woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Adelphe-Italic;
+    src: url("fonts/Adelphe-FructidorItalic.woff2");
+    font-display: swap;
+}
+
 /*  Root and setup  */
 
 :root {
@@ -26,6 +44,7 @@
     --body: 16px;
     --h1: 360px;
     --h2: 48px;
+    --text: 24px;
 }
 
 html, body {
@@ -44,6 +63,7 @@ main {
 
 
 /*  Styles  */
+/*  Main  */
 
 .week {
     width: auto;
@@ -58,6 +78,10 @@ main {
 
 .two {
     background-color: chartreuse;
+}
+
+.three {
+    background-color: #ff9966;
 }
 
 .title-grid {
@@ -95,3 +119,56 @@ main {
     display: block !important;
 }
 
+
+/*  Styles  */
+/*  Weeks  */
+
+h2 {
+    font-family: Manifont-Italic;
+    font-size: var(--h2);
+}
+
+.text {
+    font-family: Adelphe-Regular;
+    font-size: var(--text);
+    width: 100%;
+    max-width: 640px;
+}
+
+.quote {
+    font-family: Adelphe-Italic;
+    font-size: var(--text);
+    padding: var(--space-s) 0 var(--space-s) var(--space-m);
+    width: 100%;
+    max-width: calc(640px - var(--space-m));
+}
+.quote img{
+    width: 100%;
+    max-width: calc(640px - var(--space-m));
+}
+
+.ref {
+    color: blue;
+    width: min-content;
+    display: inline-block;
+    vertical-align: super;
+    font-size: smaller;
+}
+
+.ref .citation {
+    visibility: hidden;
+    width: auto;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: var(--space-xs) var(--space-s) var(--space-xxs) var(--space-s);
+    border-radius: var(--space-l);
+    position: absolute;
+    margin-left: -6px;
+    margin-top: -40px;
+    z-index: 1;
+}
+
+.ref:hover .citation, .ref:hover .citation:hover {
+    visibility: visible;
+}
