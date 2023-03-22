@@ -1,0 +1,97 @@
+/*  Fonts  */
+
+@font-face {
+    font-family: Hershey;
+    src: url("fonts/HersheyComp.woff2");
+    font-display: swap;
+}
+
+/*  Root and setup  */
+
+:root {
+    /*  Colors  */
+    --foreground: #fff;
+    --background: #fff;
+
+    /*  Spacers */
+    --space-xxs: 4px;
+    --space-xs: 8px;
+    --space-s: 16px;
+    --space-m: 32px;
+    --space-l: 64px;
+    --space-xl: 128px;
+    --space-xxl: 256px;
+
+    /*  Font sizes */
+    --body: 16px;
+    --h1: 360px;
+    --h2: 48px;
+}
+
+html, body {
+    margin: 0;
+    width: 100%;
+    width: 100%;
+    font-size: var(--body);
+}
+
+main {
+    display: grid;
+}
+
+/*  Media queries  */
+
+
+
+/*  Styles  */
+
+.week {
+    width: auto;
+    height: auto;
+    font-family: Hershey;
+    padding: 0 var(--space-m) 0 var(--space-m);
+}
+
+.one {
+    background-color: aquamarine;
+}
+
+.two {
+    background-color: chartreuse;
+}
+
+.title-grid {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    position: sticky;
+    top: 0;
+}
+
+.title {
+    font-size: var(--h1);
+    text-align: center;
+    margin-top: calc(-1 * var(--space-m));
+    margin-bottom: calc(-1 * var(--space-l) - var(--space-s));
+    line-height: 1;
+}
+
+.sub-title {
+    font-size: var(--h2);
+    text-transform: uppercase;
+    text-align: center;
+    grid-row-start: 2;
+    padding: 0 var(--space-s) var(--space-s) var(--space-s);
+}
+
+
+.week-container {
+    width: 100%;
+    height: auto;
+    min-height: 90vh;
+    display: none;
+}
+
+.show {
+    display: block !important;
+}
+
