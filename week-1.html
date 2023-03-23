@@ -18,7 +18,7 @@
             </h2>
             <div class="text">
                 You might ask yourself: »What on earth is a variable font and how do I get started with it?«. Bear with me. In the course of this semester we will get the hang of it and fully understand the whats, hows and abouts of this technology. Please don’t be shy, ask any question that comes to your mind and pull the most out of this course. But let’s start right at the beginning and get right to the core: What is a variable font?<br>
-                Really simplifying things, one could say: »it’s many fonts in one«. This was – back in the early days of variable fonts – quite a burden, especially on the web. Back then 
+                Really simplifying things, one could say: »it’s many fonts in one«. Not having »many fonts in one« was – back in the early days of variable fonts – quite a burden, especially on the web. Back then 
             </div>
             <div class="quote">
                 the glyph shapes in modern fonts [were] restricted to a single, static configuration. Any variation in weight, width, stroke contrast, etc.—no matter how subtle—require[d] separate font files. 
@@ -30,19 +30,49 @@
                 </div>
             </div>
             <div class="text">
-                Since then variable fonts have seen increasing use on the web – but not only in this medium. However, many uses are still restricted to the »classic« styles of typography as are the above mentioned variables – i.e. weight, width etc. 
+                Since then variable fonts have seen increasing use on the web – but not only in this medium. However, many uses are still restricted to the »classic« styles of typography as are the above mentioned variables – i.e. weight, width etc.
+                <div class="ref">
+                    2 
+                    <div class="citation">
+                        See for example: Marie Otsuka: Variable Fonts, 2023 <a href="https://interaction.webtype.xyz/activities/variable/" target="_blank">link</a>
+                    </div>
+                </div>
             </div>
 
             <div class="quote">
-                <img src="https://typographica.org/wp-content/uploads/2016/09/Dunbar_variable_fonts_animation_for_typographica.gif">
-                Image by Roel Nieskens via Typographica.org 
+                <video width="100%" autoplay controls loop>
+                    <source src="/media/week-1/weight-axis.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                Animating the Helveesti font along its weight axis. 
             </div>
-            
+
             <div class="text">
                 Speaking of variables: for now we only slightly touched what variable fonts are and how they work. So let us dive into some terminology. <br>
-                Variable fonts can be varied along so called axes. This just means, that each variable – that’s also where the name variable fonts comes from – such as weight, width, you name it, is attached to an axe along which the font can be interpolated. This again means, that each point that describes the outline of each glyph will be translated between two or more points – the so called drawn instances. Drawn instances are two or more actual outline drawings of letter shapes. Preferably they sit at the extremes of each axis. So in the example of a weight axis this would be an Extra Light and an Extra Bold weight for example. Axes can be separate from one another or interdependent. This means that for example you can have a weight axis and another axis for an italic angle. If everything should work together, so for example you want a Light Semi-Italic, you will create something called a Designspace. You can learn more about it in this quick video <a href="https://superpolator.com/resources.html" target="_blank">here</a>.
+                Variable fonts can be varied along so called axes. This just means, that each variable – that’s also where the name <i>variable fonts</i> comes from – such as weight, width, you name it, is attached to an axe along which the font can be interpolated. Interpolation means, that each point that describes the outline of each glyph will be translated between two or more points – the so called drawn instances. Drawn instances are two or more actual outline drawings of letter shapes. Preferably they sit at the extremes of each axis. So in the example of a weight axis this would be an Extra Light and an Extra Bold weight for example. 
+            </div>
+
+            <div class="quote">
+                <video width="100%" autoplay controls loop>
+                    <source src="/media/week-1/interpolation.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                Interpolated points defining the letter shape of Œ in the Inter font. 
+            </div>
+
+            <div class="text">
+                Axes can be separate from one another or interdependent. This means that for example you can have a weight axis and another axis for an italic angle. If everything should work together, so for example you want a Light Semi-Italic, you will create something called a Designspace. You can learn more about it in this quick video <a href="https://superpolator.com/resources.html" target="_blank">here</a>.
             </div>
             
+            <h2 class="">
+                Let's start
+            </h2>
+            
+            <div class="text">
+                In this course we will mainly use <a href="https://glyphsapp.com" target="_blank">Glyphs</a> to draw our letter shapes and setup our variable fonts. However, for more experimental stuff we might branch out and use other tools as well. If you are familiar with another Software such as <a href="https://robofont.com/" target="_blank">Robofont</a>, <a href="https://fontforge.org/" target="_blank">FontForge</a> or <a href="https://www.fontlab.com/" target="_blank">FontLab</a> please feel free to use these! We might also touch using the <a href="https://github.com/simonthi/haw-type-tools-resources#%EF%B8%8F-command-line" target="_blank">command line</a>. I highly encourage you to play around and experiment with tools and software that you are not familiar with. Sometimes just using a different software helps, making your ideas come true and not let the computer prescribe what you can and can not do. <br>
+                This week we’ll setup a variable font. As a starter 
+            </div>
+
         </main>
     </body>
 

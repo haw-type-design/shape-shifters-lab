@@ -84,6 +84,10 @@ main {
     background-color: #ff9966;
 }
 
+.null {
+    background-color: #fffd55;
+}
+
 .title-grid {
     display: grid;
     grid-template-columns: repeat(3, max-content);
@@ -171,4 +175,9 @@ h2 {
 
 .ref:hover .citation, .ref:hover .citation:hover {
     visibility: visible;
+}
+
+i {
+    font-family: Adelphe-Italic;
+    font-style: normal;
 }
