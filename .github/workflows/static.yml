@@ -38,8 +38,8 @@ jobs:
         with:
           # Upload entire repository
           path: '.'
-          find: !ruby/regexp "\/media\/week-(.*)\/(.*)"
-          replace: !ruby/regexp "https://raw.githubusercontent.com/simonthi/shape-shifters/main/media/week-$1/$2"
+          find: '\/media\/week-(.*)\/(.*)'
+          replace: 'https://raw.githubusercontent.com/simonthi/shape-shifters/main/media/week-$1/$2'
           regex: true
       - name: Deploy to GitHub Pages
         id: deployment
