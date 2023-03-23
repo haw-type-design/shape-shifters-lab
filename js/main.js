@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    const weeks = ["one", "two"];
+    const weeks = ["one"];
     const maxDepth = 3;
 
     for (var i = 0; i < weeks.length; i++) {
