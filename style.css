@@ -190,3 +190,17 @@ i {
     font-family: Adelphe-Italic;
     font-style: normal;
 }
+
+
+/* Media queries */
+
+ @media only screen and (max-width: 1280px) {
+     .null > .title-grid {
+         grid-template-columns: 1fr;
+     }
+     
+     .null > .title-grid > .sub-title {
+         grid-row-start: initial;
+     }
+}
+
