@@ -39,6 +39,8 @@
     --space-l: 64px;
     --space-xl: 128px;
     --space-xxl: 256px;
+    
+    --week-separator : 340px;
 
     /*  Font sizes */
     --body: 16px;
@@ -69,8 +71,14 @@ main {
     width: auto;
     max-width: calc(100vw - var(--space-l));
     height: auto;
+    min-height: 340px;
     font-family: Hershey;
     padding: 0 var(--space-m) 0 var(--space-m);
+}
+
+.week-separator {
+    height: var(--week-separator);
+    display: block;
 }
 
 .one {
@@ -144,7 +152,7 @@ h2 {
     font-family: Adelphe-Italic;
     font-size: var(--text);
     padding: var(--space-s) 0 var(--space-s) var(--space-m);
-    width: 100%;
+    width: calc(100vw - var(--space-m));;
     max-width: calc(640px - var(--space-m));
 }
 .quote img{
