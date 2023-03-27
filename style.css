@@ -67,6 +67,7 @@ main {
 
 .week {
     width: auto;
+    max-width: calc(100% - var(--space-l));
     height: auto;
     font-family: Hershey;
     padding: 0 var(--space-m) 0 var(--space-m);
