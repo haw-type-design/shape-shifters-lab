@@ -191,6 +191,22 @@ i {
     font-style: normal;
 }
 
+a::before{
+    content: '☞ ';
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+::-moz-selection { /* Code for Firefox */
+  background: #fffd55;
+}
+
+::selection {
+  background: #fffd55;
+}
 
 /* Media queries */
 
