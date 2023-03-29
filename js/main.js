@@ -31,4 +31,10 @@ function toggler(id) {
     var t = document.querySelector("#"+id);
     var htmlDocument= t.contentWindow.document.body.scrollHeight;
     $("#"+id).css("height", htmlDocument);
+    if(document.title.includes("Week")) {
+        document.title = "Shape Shifters LAB";
+    } else {
+        document.title = "Week " + id.toUpperCase() + " — Shape Shifters LAB";
+    }
+
 }
