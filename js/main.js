@@ -28,8 +28,6 @@ $(window).on("load",function(){
 
 async function runner(id) {
     await toggler(id);
-   
-
     window.scrollTo({
         top: $("."+id).position().top,
         left: 0,

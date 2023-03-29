@@ -150,6 +150,7 @@ main {
 h2 {
     font-family: Manifont-Italic;
     font-size: var(--h2);
+    margin-top: var(--space-xl);
 }
 
 .text {
