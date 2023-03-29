@@ -1,10 +1,6 @@
+let weeks = ["one"];
 $(document).ready(function(){
-    const weeks = ["one"];
-    const maxDepth = 3;
-
-    for (var i = 0; i < weeks.length; i++) {
-        $("#"+weeks[i]).toggleClass("show");
-    }
+    let maxDepth = 3;
     $(document).click(function(event) {
         var target = $(event.target);
         var targetClass = target.parent().prop('className');
@@ -21,6 +17,14 @@ $(document).ready(function(){
 
 
 });
+
+$(window).on("load",function(){
+    for (var i = 0; i < weeks.length; i++) {
+        $("#"+weeks[i]).toggleClass("show");
+    }
+
+});
+
 
 function toggler(id) {
     $("#"+id).toggleClass("show");
