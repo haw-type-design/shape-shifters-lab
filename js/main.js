@@ -1,4 +1,4 @@
-let weeks = ["one"];
+let weeks = ["one", "two", "three", "four", "five"];
 $(document).ready(function(){
     let maxDepth = 3;
     $(document).click(function(event) {
@@ -12,7 +12,8 @@ $(document).ready(function(){
                 targetClass = target.parent().prop('className');
             }
         }
-        toggler(targetClass.substring(5));
+        runner(targetClass.substring(5));
+
     });
 
 
@@ -25,16 +26,36 @@ $(window).on("load",function(){
 
 });
 
+async function runner(id) {
+    await toggler(id);
+   
 
-function toggler(id) {
+    window.scrollTo({
+        top: $("."+id).position().top,
+        left: 0,
+        behavior: 'smooth'
+    });
+}
+
+async function toggler(id) {
     $("#"+id).toggleClass("show");
     var t = document.querySelector("#"+id);
     var htmlDocument= t.contentWindow.document.body.scrollHeight;
     $("#"+id).css("height", htmlDocument);
-    if(document.title.includes("Week")) {
+    if(document.title.includes("Week " + capitalizeFirstLetter(id))) {
         document.title = "Shape Shifters LAB";
     } else {
-        document.title = "Week " + id.toUpperCase() + " — Shape Shifters LAB";
+        document.title = "Week " + capitalizeFirstLetter(id) + " — Shape Shifters LAB";
     }
+    for (var i = 0; i < weeks.length; i++) {
+        if(weeks[i] !== id) {
+            $("#"+weeks[i]).removeClass("show");
+        }
+    }
+    return;
+}
 
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
