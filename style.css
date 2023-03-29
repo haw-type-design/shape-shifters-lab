@@ -93,8 +93,20 @@ main {
     background-color: #ff9966;
 }
 
+.four {
+    background-color: #B500F1;
+}
+
+.five {
+    background-color: #d70a53;
+}
+
 .null {
     background-color: #fffd55;
+}
+
+.week + .null {
+    min-height: 72px;
 }
 
 .title-grid {
@@ -124,7 +136,6 @@ main {
 .week-container {
     width: 100%;
     height: auto;
-    min-height: 90vh;
     display: none;
 }
 
