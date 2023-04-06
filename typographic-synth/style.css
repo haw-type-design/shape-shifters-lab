@@ -116,3 +116,11 @@ body {
 .blackkey:hover {
     background-color: darkslategrey;
 }
+
+@media screen and (max-width: 720px) {
+
+    .typewrapper {
+        font-size: 240px;
+    }
+
+}
