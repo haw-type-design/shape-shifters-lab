@@ -164,3 +164,6 @@ function runOscillator(freq, id){
         document.getElementById("type").innerHTML= "";
     });
 }
+
+
+

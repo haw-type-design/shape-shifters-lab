@@ -20,7 +20,7 @@
             <div class="whitekey" id="A"></div>
             <div class="whitekey" id="H"></div>
         </div>
-        
+
         <div class="blackkeywrapper">
             <div class="blackkey" id="C#"></div>
             <div class="blackkey" id="D#"></div>
@@ -28,8 +28,42 @@
             <div class="blackkey" id="G#"></div>
             <div class="blackkey" id="A#"></div>
         </div>
-        
-        
+
+
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">X</span>
+                <p>A typographical synthesizer. Developed in the LAB course Shape Shifters at HAW Hamburg. <br>
+                    Play the keys and enjoy the varaible fonts.<br><br>
+                    Participating students:<br>
+                     Carlotta, Finn, Jason, Laura, Lena, Lorenz, Maike, Saige, Yuval,Meret
+                </p>
+            </div>
+
+        </div>
+
     </body>
     <script src="main.js"></script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </html>
