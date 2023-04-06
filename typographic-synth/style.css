@@ -1,0 +1,118 @@
+@font-face {
+    font-family: Adelphe-Regular;
+    src: url("fonts/Adelphe-FructidorRegular.woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Adelphe-Italic;
+    src: url("fonts/Adelphe-FructidorItalic.woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Synth;
+    src: url("fonts/synth-type.woff2");
+    font-display: swap;
+}
+
+body { 
+    font-family: Adelphe-Reegular;
+    background-color: black;
+    margin: 0;
+    overflow: hidden;
+}
+
+.typewrapper {
+    font-family: Synth;
+    font-size: 360px;
+    height: 50vh;
+    display: block;
+    color: white;
+    text-align: center;
+}
+
+
+
+.animate {
+    animation: sine 0.2s cubic-bezier(0.37, 0, 0.63, 1) alternate infinite;
+}
+
+@keyframes sine {
+    0%{
+        font-variation-settings: "OUTR" 100, "INNR" 100;
+    }
+
+    100%{
+        font-variation-settings: "OUTR" 900, "INNR" 100;
+    }
+}
+
+.animate-2 {
+    animation: cos 1.6s cubic-bezier(0.37, 0, 0.63, 1) alternate infinite;
+}
+
+@keyframes cos {
+    0%, 100%{
+        font-variation-settings: "OUTR" 100, "INNR" 100;
+    }
+    25%{
+        font-variation-settings: "OUTR" 900, "INNR" 100;
+    }
+    50%{
+        font-variation-settings: "OUTR" 900, "INNR" 900;
+    }
+    75% {
+        font-variation-settings: "OUTR" 100, "INNR" 900;
+    }
+}
+
+.keywrapper {
+    display: grid;
+    top: 50vh;
+    height: 50vh;
+    width: 100vw;
+    grid-template-columns: repeat(7, 1fr);
+    position: absolute;
+}
+
+.whitekey {
+    width: auto;
+    height: auto;
+    display: block;
+    background-color: white;
+    margin-right: 1%;
+    margin-left: 1%;
+}
+
+.whitekey:hover {
+    background-color:   ivory;
+}
+
+.blackkeywrapper {
+    display: grid;
+    top: 50vh;
+    height: 25vh;
+    width: 100vw;
+    grid-template-columns: repeat(7, 1fr);
+    margin-left: 7%;
+    margin-right: 7%;
+    position: absolute;
+}
+
+.blackkey {
+    width: auto;
+    height: auto;
+    display: block;
+    background-color: black;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.blackkey:nth-child(3) {
+    grid-column: 4;
+}
+
+.blackkey:hover {
+    background-color: darkslategrey;
+}
