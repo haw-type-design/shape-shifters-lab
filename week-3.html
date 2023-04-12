@@ -6,7 +6,7 @@
         <link rel="preload" href="fonts/HersheyComp.woff2" as="font" type="font/woff2" crossorigin>
         <meta property="og:image" content="">
         <link rel="icon" href="img/favicon.png" type="image/png">
-        <title>Shape Shifters LAB — Week 2</title>
+        <title>Shape Shifters LAB — Week 3</title>
         <link rel="stylesheet" href="style.css">
         <script src="js/jQuery.js"></script>
         <script  src ="js/main.js"></script>
@@ -14,10 +14,59 @@
     <body>
         <main>
             <h2 class="">
-                TBA
+                The case for modularity
+            </h2>
+
+            <div class="text">
+                This week we will start the endeavour of lauching your projects and bring first drawings to the screen. If we bring back to memory last weeks questions, we can take first steps into a drawing process. For this we will do the classic type designer’s tricks of starting with lower case letters n and o. This will allow us to make use of modularity, so to compose new letters using shapes of the existing ones. I.e. if you draw your n you almost have your h and m and maybe even a u. However, it is important to not stop it here. The motto is: draw, draw, draw. Don’t be satisfied with the first attempts. First ideas and sketches are almost never your best. And even if they are it’s just upon comparing them againsrt others that you will realise. So keep going. <br>
+
+            </div>
+
+            <div class="quote">
+                <img src="media/week-3/proportions.png">
+                Testing different widths of lowercase n. 
+            </div>
+
+            <div class="text">
+                While drawing your letters keep spacing in mind. Try out different left and right sidebearings. Spacing your font will heavily influence the appearance of your letter shapes. For this you’ll need to test in an application of your choice. A good idea is — once more — to make use of modularity: when you start to space your n, chances are, your m will be spaced likewise because they are both vertical on the left and on the right. So test verticals against verticals by typing strings of n(nnnnnnn). Then do the same for o(oooooo), so rounds on both sides. Then test n against o and the other way around. So test non, ono, etc. Like this you will cover many situations in your font already.<br>
+                Next: try to test looser and wider spacing. Try to increment and decrement your LSBs and RSBs by units of 2, 4, 8 etc. Export and test in between. Like this you will be able to take a decision on how you want to space your font.
+            </div>
+
+            <div class="quote">
+                <video width="100%" autoplay controls loop>
+                    <source src="media/week-3/spacing.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                Testing spacing with spacing strings and units of 8. 
+            </div>
+            
+            <h2 class="">
+                When in doubt: print!
+            </h2>
+            
+            <div class="text">
+                Although in this course we will primarily focus on type for the screen, printing can sometimes be a good exercise, to evaluate your drawings. Print strategically: try different sizes, words (as soon as possible), spacing strings (your letters between o and n), and text when you have enough letters to render some words. You can use tools like Nina Stössinger’s <a href="https://github.com/schriftgestalt/word-o-mat" target="_blank">word-o-mat</a> to create testwords that incoporate the charcters you currently have in your font.<br>
+                Before working on all characters at once try to get the proportions, spacing and feel of some key characters right. So for no stick to n and o and its derivates. 
+            </div>
+            
+            <h2 class="">
+                Tracking changes
+            </h2>
+
+            <div class="text">
+                As a closing note: it can be a good idea to start to think about how you want to manage your files and data. I recommend to start using a version manager like git. Git allows you to track every file you save and leave a little commit note which is like a diary entry where you can note what you changed and did. This can be handy to go back to previous versions of your files to compare and see what changed or what works better. This works best with open file formats like .glphs or .ufo files.<br>
+                You can also link up your files to an online service like <a href="https://github.com" target="_blank">GitHub</a> or <a href="https://gitlab.com" target="_blank">GitLab</a> to store your files online and make them acessible via multiple machines.  
+            </div>
+            
+            <h2 class="">
+                Further reading
             </h2>
             <div class="text">
-
+                <ul>
+                    <li><a href="https://ohnotype.co/blog/ohno-type-school-n" target = "_blank"></a>OHno Type School: n</li>
+                    <li><a href="https://github.com/arrowtype/type-x" target = "_blank"></a>Type-X: Test your fonts on websites</li>
+                    <li><a href="https://adhesiontext.com/" target = "_blank"></a>Adhesiontext: test string generator</li>
+                </ul>
             </div>
 
         </main>
