@@ -24,6 +24,12 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: CM-Mono;
+    src: url("fonts/cmuntb.woff2");
+    font-display: swap;
+}
+
 /*  Root and setup  */
 
 :root {
@@ -99,6 +105,26 @@ main {
 
 .five {
     background-color: #d70a53;
+}
+
+.six {
+    background-color: #08FFFF;
+}
+
+.seven {
+    background-color: red;
+}
+
+.eight {
+    background-color: #3b75e2;
+}
+
+.nine {
+    background-color: #fff900;
+}
+
+.ten {
+    background-color: #e74c3c
 }
 
 .null {
@@ -201,6 +227,15 @@ h2 {
 i {
     font-family: Adelphe-Italic;
     font-style: normal;
+}
+
+
+code {
+    background-color: dodgerblue;
+    color: white;
+    padding: var(--space-xs) var(--space-xs) 0 var(--space-xs);
+    font-family: CM-Mono;
+    display: inline-block;
 }
 
 a::before{

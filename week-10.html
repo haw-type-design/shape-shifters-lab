@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="preload" href="fonts/HersheyComp.woff2" as="font" type="font/woff2" crossorigin>
+        <meta property="og:image" content="">
+        <link rel="icon" href="img/favicon.png" type="image/png">
+        <title>Shape Shifters LAB — Week 10</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="js/jQuery.js"></script>
+        <script  src ="js/main.js"></script>
+    </head>
+    <body>
+        <main>
+            <h2 class="">
+                Learning a new (Hypertext Markup) Language (HTML)
+            </h2>
+            <div class="text">
+                Exciting! We will learn a new language. And one that machines can speak as well. This one is called HTML which is short for Hypertext Markup Language. More about it <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">here</a>. But let’s start with a bit of terminology to know what we are talking about:<br>
+                The first important concept is that of <i>tags</i>. These are used to structure our content and to name its elements. The name of such an element is set in angle brackets like:
+                <code>&lt;p&gt;</code> for paragraph. Tags are always opened and closed around their content, just like brackets. You close them using a slash before the tag name: 
+                <code>&lt;/p&gt;</code>. <br>
+                These tags can be compiled to <i>elements</i>. Elements comprise and opening and a closing tag enclosing some text content i.e. <code>&lt;p&gt; Some text &lt;/p&gt;</code>.<br>
+                These elements can be nested inside one another to create hierarchy. So for example could each product on a page have a title and a price. The resulting code could look like that:<br>
+                <code>
+                    &lt;product&gt;<br>
+                    &lt;h1 class="product-name"&gt;Product name&lt;/h1&gt;<br>
+                    &lt;p id="this-price"&gt;Product price&lt;/p&gt;<br>
+                    &lt;/product&gt;
+                </code><br>
+                Note that elements are hierarchical. That means that every <i>parent</i> such as <code>&lt;product&gt;</code> which enloses both <code>&lt;h1&gt;</code> and <code>&lt;p&gt;</code> inherits its styling (we will touch this later) to its <i>children</i> (so <code>&lt;h1&gt;</code> and <code>&lt;p&gt;</code> in our case.)<br> 
+                So far so good. We now have a first idea about how to structure our documents. Let’s give our elements some <i>style</i>. Normally this is done using <i>CSS</i> which is the acronym for Cascading Style Sheet. A style declaration consists of a selector (the targeted element, i.e. <code>p</code>), a property (what you’re styling, i.e. <code>font-size</code>), and value (how you’re styling it, i.e. <code>1em</code>). A stylesheet for our above example could thus look as follows:<br>
+                <code>
+                    product {<br>
+                    background-color: blue;<br>
+                    display: block;<br>
+                    }<br>
+                    <br>
+                    .product-name {<br> 
+                    font-size: 2em;<br>
+                    color: red;<br>
+                    }<br>
+                    <br>
+                    #this-price  {<br>
+                    font-weight: bold;<br>
+                    }
+                </code><br>
+                Note that different selectors are at play here. We are targeting a tag with <code>product</code> by referencing its name. <code>.product-name</code> is referencing a <i>class</i>. With classes you can apply sets of stylings to multiple HTML elements that have the same class attribute (i.e. <code>&lt;h1 class="product-name"&gt;Product name&lt;/h1&gt;</code>). It is also possible to apply more than one class by separating them with a space (i.e. <code>&lt;h1 class="product-name some-other-class"&gt;Product name&lt;/h1&gt;</code>). But be careful that your styling is not contradictory (i.e. it makes no sense to style the <code>font-size</code> twice). <br>
+
+
+                <h2 class="">
+                    Embedding (variable) fonts 
+                </h2>
+
+                The trick about this — as this one is about styling — lies in CSS. To specify a font, we will make use of the <code>@font-face</code> rule. We can directly dump it into our CSS like so:
+                <code>
+                    @font-face {<br>
+                    font-family: "MyFont";<br>
+                    src: url("https://haw-type-design.github.io/octagon-variable/fonts/OctagonVariableVF.woff2");<br>
+                    }<br>
+                </code>
+                Now you can use your font as <code>MyFont</code> inside your code. Like so: <code>font-family: MyFont;</code><br>
+
+                Let’s get to the fun part: playing with the variable axes. This is done using the <code>font-variation-settings</code> rule. For our example this could look like this: <br>
+
+                <code>
+                    .vfont {<br>
+                    font-family: "MyFont";<br>
+                    font-variation-settings: "VROT" -30, "HROT" 30;<br>
+                    }<br>
+                </code>
+                Here we make use of the two variable axes of the font <code>VROT</code> and <code>HROT</code> and assign a value one the axis. Here these are <code>-30</code> and <code>30</code>.<br>
+                For easier file handling you can setup your own GitHub pages page (<a href="https://pages.github.com/" target="_blank">tutorial here</a>) and upload your font, to get a link to it, so that we can use it in our first drafts. It is also a good idea to sign up at <a href="https://codepen.io" target="_blank">Codepen</a> to scribble some code.<br>
+                This is about the basics, that we will need to proceed. Please have a look at the links below and start to experiment. Also don’t forget to use the browser inspector (⌥⌘I) to look at sites that you find interesting and have a look at their code, to see what CSS they use. Experiment and have fun.
+            </div>
+            
+
+            <h2 class="">
+                Further reading
+            </h2>
+            <div class="text">
+                <ul>
+                    <li><a href="https://codepen.io" target="_blank">Online Code Editor</a></li>
+                    <li><a href="https://brackets.io/" target="_blank">Brackets — Code Editor</a></li>
+                    <li><a href="https://www.sublimetext.com/" target="_blank">Sublime Text — Code Editor</a></li>
+                    <li><a href="https://code.visualstudio.com/" target="_blank">Visual Studio — Code Editor</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">Mozilla HTML Docs</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">Mozilla CSS Docs</a></li>
+                    <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
+                    <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools — References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide" target="_blank">Variable Font Guide</a></li>
+                    <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">A first glance at grids</a></li>
+                    
+                </ul>
+            </div>
+
+            <div class="week-separator"></div>
+        </main>
+    </body>
+</html>
