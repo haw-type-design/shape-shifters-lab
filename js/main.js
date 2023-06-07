@@ -1,4 +1,4 @@
-let weeks = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
+let weeks = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven"];
 $(document).ready(function(){
     let maxDepth = 3;
     $(document).click(function(event) {
