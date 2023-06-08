@@ -75,7 +75,19 @@
                     }<br>
                     }
                 </code> <br>
-                In that case my animation only is performed, when the <code>.vfont</code> class gets hovered.
+                In that case my animation only is played, when the <code>.vfont</code> class gets hovered.<br>
+                Another way to achieve this (maybe even better for the case of hover animations) are transitions. A transtition controls the speed and the way two states of one class are animated. For our above example this would look as follows:<br>
+                <code>
+                    .vfont {<br>
+                    font-family: "MyFont";<br>
+                    font-variation-settings: "VROT" 30, "HROT" -30;<br>
+                    transition: 2s;<br>
+                    }<br>
+                    <br>
+                    .vfont:hover {<br>
+                    font-variation-settings: "VROT" -30, "HROT" 30;<br>
+                    }</code>
+                Important to note is that each animated property is given a value in bothe the <code>.vfont</code> class and also its <code>:hover</code> pseudo-class. Other than that transitions work more or less equivalent to animations. 
             </div>
 
 
