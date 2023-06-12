@@ -17,9 +17,78 @@
                 Organizing content and using grids
             </h2>
             <div class="text">
-                
+                This week we will take a look at slightly advanced ways on how you can organize your content using grids and/or the flex layout.<br> 
+                Sometimes in the organisation of your layout you might need more than one column or more advanced options of layout and where your content can go. That’s where grid and flex layouts come in to help. We can think of grids as we would in layout software. To use grids we have to make use of the parent/child concept. As a quick reminder we can nest content inside each other be enclosing the tags into one another like so:<br>
+                <code>
+                    &lt;div class="grid-container"&gt;<br>
+                    &lt;div class="grid-item"&gt;<br>
+                    &lt;/div&gt;<br>
+                    &lt;div class="grid-item"&gt;<br>
+                    &lt;/div&gt;<br>
+                    &lt;div class="grid-item"&gt;<br>
+                    &lt;/div&gt;<br>
+                    &lt;/div&gt;
+                </code> <br>
+                In this example <code>grid-container</code> is our parent and  the three <code>grid-item</code> our children. So if we define <code>grid-container</code> to be a <code>grid</code> everything inside this tag will be layout inside this grid (we can still define what goes where and even define exceptions). But first of all let’s set up a grid:<br>
+                <code>
+                    .grid-container {<br>
+                    display: grid;<br>
+                    grid-template-columns: 1fr 1fr 300px;<br>
+                    }<br>
+                </code> 
+                We now defined a grid which has three colums. The rightmost colum is 300px wide. The two colums to the left equally share the space that is left. Let’s give our columns some color, so that we can see what happens:<br>
+                <code>
+                    .grid-item {<br>
+                    background-color:red;<br>
+                    width:100%;<br>
+                    height: 100%;<br>
+                    display: block;<br>
+                    }<br>
+                    <br>
+                    .grid-item:nth-child(even) {<br>
+                    background-color:blue;<br>
+                    }<br>
+                </code>
+                Here I am making use of the <code>:nth-child</code> pseudo-class to select the second element in our grid (and all multiples of two), so our second column to color it blue. <br>
+                We can not only define columns but rows, too. If we do not define our rows specifically, once a row is full, adding more elements will result in new rows with the same column layout as the previous. You can try this by adding <code>grid-item</code> elements in the above example. We can now add <code>grid-template-rows</code> to the mix. With this we can define the height of our rows. One example could be:<br>
+                <code>
+                    .grid-container {<br>
+                    display: grid;<br>
+                    grid-template-columns: 1fr 1fr 300px;<br>
+                    grid-template-rows: 50vh 320px;<br>
+                    }<br>
+                </code> 
+                Here our first row would take 50% of the height of the viewport (normally your screen) and the second 320px. Depending on how large we set our <code>grid-item</code> elements to be, we will have some overlap if they are bigger than our rows. (Luckily we set them to 100% above so they take the width and height defined by their parent, so the grid rows and columns).<br>
+                Bringing it all together we can also make our grid slightly more human readible by defining the areas and giving them names. This is done using the <code>grid-template</code> rule. <br>
+                <code>
+                    .grid-container {<br>
+                    display: grid;<br>
+                    grid-template:<br>
+                    'title  title   title'<br>
+                    'notes  content  content'<br>
+                    'notes  footer   copyright';<br>
+                    }<br>
+                </code> 
+                We can then define what goes where by simply adding a <code>grid-area</code> rule in the child items like so:
+                <code>
+                    .grid-item-1 {<br>
+                    grid-area: notes;<br>
+                    }<br>
+                </code>
+                imagining our <code>grid-item-1</code> element would hold our notes.
             </div>
-
+            <h2 class="">
+                When to flex?
+            </h2>
+            <div class="text">
+                Phew. A lot to digest. What do I need flex for now, I hear you ask. Well the boundaries are fluent between the two. However, somentimes you just want to put your elements neatly aligned next to one another, flowing from row to row without having to think about grid layouts, spaces, rows, columns and what not. Time to flex. Just define your parent element to be flex and the children will flow into the available space like so:<br>
+                <code>
+                    .flex-container {<br>
+                    display: flex;<br>
+                    }<br>
+                </code>
+                Sometimes this is just simpler to align your content or distribute it within available space. You are now nicely, equipped with ideas in how to organize your content. Feel free to click through the links below, because we have not yet touched everything. There is more to both grids and flexs. Way more than we could cover here, but this is about the basics that you need. 
+            </div>
 
             <h2 class="">
                 Further reading
@@ -28,6 +97,7 @@
                 <ul>
                     <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">A CSS grid guide</a></li>
                     <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout" target="_blank">Another CSS grid guide</a></li>
+                    <li><a href="https://css-tricks.com/quick-whats-the-difference-between-flexbox-and-grid/" target="_blank">Grid vs flex</a></li>
 
                 </ul>
             </div>
