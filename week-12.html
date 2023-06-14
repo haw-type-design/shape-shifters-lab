@@ -48,7 +48,7 @@
                     .grid-item:nth-child(even) {<br>
                     background-color:blue;<br>
                     }<br>
-                </code>
+                </code><br>
                 Here I am making use of the <code>:nth-child</code> pseudo-class to select the second element in our grid (and all multiples of two), so our second column to color it blue. <br>
                 We can not only define columns but rows, too. If we do not define our rows specifically, once a row is full, adding more elements will result in new rows with the same column layout as the previous. You can try this by adding <code>grid-item</code> elements in the above example. We can now add <code>grid-template-rows</code> to the mix. With this we can define the height of our rows. One example could be:<br>
                 <code>
@@ -57,7 +57,7 @@
                     grid-template-columns: 1fr 1fr 300px;<br>
                     grid-template-rows: 50vh 320px;<br>
                     }<br>
-                </code> 
+                </code> <br>
                 Here our first row would take 50% of the height of the viewport (normally your screen) and the second 320px. Depending on how large we set our <code>grid-item</code> elements to be, we will have some overlap if they are bigger than our rows. (Luckily we set them to 100% above so they take the width and height defined by their parent, so the grid rows and columns).<br>
                 Bringing it all together we can also make our grid slightly more human readible by defining the areas and giving them names. This is done using the <code>grid-template</code> rule. <br>
                 <code>
@@ -68,13 +68,13 @@
                     'notes  content  content'<br>
                     'notes  footer   copyright';<br>
                     }<br>
-                </code> 
+                </code> <br>
                 We can then define what goes where by simply adding a <code>grid-area</code> rule in the child items like so:
                 <code>
                     .grid-item-1 {<br>
                     grid-area: notes;<br>
                     }<br>
-                </code>
+                </code><br>
                 imagining our <code>grid-item-1</code> element would hold our notes.
             </div>
             <h2 class="">
@@ -86,7 +86,7 @@
                     .flex-container {<br>
                     display: flex;<br>
                     }<br>
-                </code>
+                </code><br>
                 Sometimes this is just simpler to align your content or distribute it within available space. You are now nicely, equipped with ideas in how to organize your content. Feel free to click through the links below, because we have not yet touched everything. There is more to both grids and flexs. Way more than we could cover here, but this is about the basics that you need. 
             </div>
 
