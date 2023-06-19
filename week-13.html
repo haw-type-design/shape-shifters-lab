@@ -14,10 +14,48 @@
     <body>
         <main>
             <h2 class="">
-                Interactivity
+                Let's (Java)Script it!
             </h2>
             <div class="text">
-               
+                Here we are once more, contemplating the might-this-be-possibles and what-ifs of our newly learned skills. In a next step, let’s start to extend them and add some interactivity and other possibilities to the mix.<br> 
+                Enter JavaScript.<br>
+                But let’s start it slow. JavaScript will allow us — consciously omitting some of its capabilities — to chime in, where HTML and CSS reach their limits. What could this mean? This could mean querying user interactions such as scrolling, moving the mouse, tilting the device, the microphone, etc. and doing stuff with it such as playing animations, changing CSS classes, changing the content of your page, you name it.Sounds fun huh? So how do we do the magic?<br>
+                Similar to CSS, our JavaScript needs to know who we are talking to aka which element in our HTML structure is actually adressed before doing anything. We can do this by »getting« and element. This is a concept widely used in programming: getting and setting. This simply means that we can get information from an element but also change the element. This is referred to as »setting«. <br>
+                OK, considering a real-world example and let us start with a simple exaple to change the <code>font-variation-settings</code> of our fonts. So, say we have a text, that we want to change the variable font within on clicking on it. The HTML is pretty straight forward and looks as follows: <br>
+                <code>
+                    &lt;div id="sample-text"&gt;<br>
+                    Here comes the text<br>
+                    &lt;/div&gt;<br>
+                </code>
+                We could now directly manipulate the font by using JavaScript:<br>
+                <code>
+                    document.getElementById("sample-text").style.setProperty("font-variation-settings","'VROT' 30","");<br>
+                </code>
+                With the first section we are getting the element with the ID <code>sample-text</code> then we are setting the style to the property named in the brackets. This for now is not really interesting as we could more easily achieve the same by using CSS. However, if we mix in some interactivity the JavaScript part becomes a bit more interesting:<br>
+                <code>
+                    document.getElementById("sample-text").addEventListener("click", function () {<br>
+
+                    document.getElementById("sample-text").style.setProperty("font-variation-settings","'VROT' 30","");<br>
+
+                    });<br>
+                </code>
+                We are once more getting the element <code>sample-text</code> with the <code>document.getElementById("sample-text")</code> part. With the following part we are adding a so called event listeners. These are like little helpers, that can help us watch out for events of all sorts: clicks, double clicks, mouse releases, key presses etc. and fire events once the event happens. In our case change the font to the defined settings. <br>
+                But, I hear you say, this is a one way. Once fired the event will stay as is until the page gets reloaded. There must be a nicer way to achieve the same. (Note in programming there often ist not <i>one</i> single way to achieve result xy but multiple). So let’s try something else:<br>
+                <code>
+                    document.getElementById("sample-text").addEventListener("click", function () {<br>
+
+                    document.getElementById("sample-text").classList.toggle("vfont");<br>
+
+                    });<br>
+                </code>
+                In this case we use a helper class named <code>vfont</code> which could look as follows:<br>
+                <code>
+                    .vfont {<br>
+                    font-variation-settings: 'VROT' 30;<br>
+                    transition: 0.3s;<br>
+                    }<br>
+                </code>
+                The idea here is simple: if the class is active, we remove it (and the font returns to normal, whatever this is). If it is not, the class gets applied, so transitioned to the settings defined in the <code>vfont</code> class. Last but not least, we could add a transtion to the <code>sample-text</code> ID and our font wouuld nicely animate on click. Yikes — we wrote our first lines of JavaScript!
             </div>
 
 
@@ -27,7 +65,7 @@
             <div class="text">
                 <ul>
                     <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript introduction</a></li>
-                    
+                    <li><a href="https://codepen.io/lorp/pen/ZEbqGYG" target="_blank">A simple variable slider by Laurence Penney</a></li>
                 </ul>
             </div>
 
