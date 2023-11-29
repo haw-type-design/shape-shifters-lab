@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="preload" href="fonts/HersheyComp.woff2" as="font" type="font/woff2" crossorigin>
+        <meta property="og:image" content="">
+        <link rel="icon" href="img/favicon.png" type="image/png">
+        <title>Shape Shifters LAB — Week 14</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="js/jQuery.js"></script>
+        <script  src ="js/main.js"></script>
+    </head>
+    <body>
+        <main>
+            <h2 class="">
+                Prepare for roll out
+            </h2>
+            <div class="text">
+                We are slowly but steadily approaching the end of this semester. Yet a few things are still needed to get your site up and running, as for now most of them only live within the bounds of codepen. So let us set everything up and package it to prepare the upload. Basically, we have about 99% of what we need. We just need to make it digestable for brwosers and add some niceties that are optional but will make the user experience better, or at least somehow.<br>
+                One thing we did not include in codepen is the <code>&lt;head&gt;</code> tag. Inside this tag we can incorporate a few things that will help the browser to find files such as our stylesheets (everything that we dumped into the CSS section in codepen for now). The same goes for potential Javascript. A typical <code>&lt;head&gt;</code> tag could thus look as follows:<br>
+                <code>
+                    &lt;head&gt;<br>
+                        &lt;meta charset="utf-8"&gt;<br>
+                        &lt;meta name="viewport" content="width=device-width"&gt;<br>
+                        &lt;meta property="og:image" content="link/tofile.png"&gt;<br>
+                        &lt;title&gt;Shape Shifters LAB — Week 14&lt;/title&gt;<br>
+                        &lt;link rel="icon" href="img/favicon.png" type="image/png"&gt;<br>
+                        &lt;link rel="stylesheet" href="style.css"&gt;<br>
+                        &lt;script  src ="js/main.js"&gt;&lt;/script&gt;<br>
+                    &lt;/head&gt;<br>
+                </code>
+                
+                With the first two lines, we are setting the encoding of the page to UTF-8 which simply tells the browser, which signs to interpret as which. We are also setting the default width of our page content to the width of our browser screen or our mobile device respectively.<br>
+                The <code>title</code> tag sets the title of your page. This is displayed as title of your browser tabs, or when you share your link.<br>
+                The following <code>meta</code> tag sets the image of the page that will be previewed, when you share the link to your page on messengers. Quite nice, but not required.<br>
+                All the <code>link</code> tags reference links. I.e. to the favicon (the icon displayed in the browser tabs), or we can tell the browser where to find our CSS by referencing the stylesheet.  
+                
+                
+            </div>
+
+
+            <h2 class="">
+                Further reading
+            </h2>
+            <div class="text">
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript introduction</a></li>
+                    <li><a href="https://codepen.io/lorp/pen/ZEbqGYG" target="_blank">A simple variable slider by Laurence Penney</a></li>
+                </ul>
+            </div>
+
+            <div class="week-separator"></div>
+        </main>
+    </body>
+</html>
